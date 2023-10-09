@@ -1,0 +1,9 @@
+<% if @posts.count.positive? %>
+<ul>
+<% @posts.each do |post| %>
+  <li><%= link_to post.title, post %></li>
+<% end %>
+</ul>
+<% else %>
+<h1>There are no posts, dummy!</h1>
+<% end %>
