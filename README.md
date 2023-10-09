@@ -1,24 +1,39 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Commands I ran:
 
-Things you may want to cover:
+```bash
+# Set up a new rails app
+rails new admin-area-app --database=postgresql
+```
 
-* Ruby version
+```bash
+# Move into our new directory
+cd admin-area-app
+```
 
-* System dependencies
+```bash
+# Setup our database and run any pending migrations
+rails db:setup
+rails db:migrate
+```
 
-* Configuration
+```bash
+# Commit it all to Git!
+git add .
+git commit -m "Initial commit"
+```
 
-* Database creation
+```bash
+# Add activeadmin (for our admin area) and devise (for authentication)
+bundle add devise activeadmin
+```
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```bash
+# Add devise to our project
+rails generate devise:install
+# Add devise model for authentication
+rails generate devise User
+# Migrate the database to add the new User model
+rails db:migrate
+```
