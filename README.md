@@ -37,3 +37,10 @@ rails generate devise User
 # Migrate the database to add the new User model
 rails db:migrate
 ```
+
+```bash
+# Initialize ActiveAdmin, but use our "User" model
+rails generate active_admin:install --skip-users
+# Migrate the database
+rails db:migrate
+```
